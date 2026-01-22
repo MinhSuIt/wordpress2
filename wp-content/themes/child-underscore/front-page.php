@@ -383,4 +383,11 @@ get_sidebar(); // sidebar.php, get_sidebar('footer');   // sẽ lấy sidebar-fo
 // }
 
 get_footer();
+
+// get_template_part('base/template-parts/post-list/index');
+// get_template_part('base/template-parts/tag-list/index');
+get_template_part('base/template-parts/menu/index');
+
 ?>
+<?php echo do_shortcode('[post_list_shortcode]'); ?>
+<?php echo do_shortcode('[tag_list_shortcode]'); ?>

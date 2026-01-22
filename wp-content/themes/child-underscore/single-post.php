@@ -6,7 +6,11 @@ Template Name: Pricing Page
 <!-- Tạo page trong admin rồi vào chỉnh sửa nhanh chọn Mẫu trang là template này, Đường dẫn là pricing (/pricing)
 Thêm vào menu dạng page Pricing
 Nếu truy cập /pricing ko được thì vào cài đặt > cấu trúc đường dẫn > Tiêu đề bài viết  -->
-
+<?php
+if (is_single()) {
+    set_post_views(get_the_ID());
+}
+?>
 <?php get_header(); ?>
 
 <?php get_template_part('template-parts/breadcrumb'); ?>

@@ -1,0 +1,26 @@
+.tag-panel .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.tag-panel .tag-item {
+    list-style: none;
+}
+
+.tag-panel .tag-badge {
+    padding: 6px 12px;
+    padding-top: 4px;
+    border-radius: 999px;
+    background: #f1f3f5;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.tag-panel .tag-badge:hover {
+    background: #111;
+    color: #fff;
+}

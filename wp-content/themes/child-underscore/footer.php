@@ -66,6 +66,10 @@
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js" defer></script>
 
+
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/base/template-parts/menu/js.js" defer></script>
+
+
 <!-- bắt buộc để load js liên quan plugin -->
 <?php wp_footer(); ?>
 

@@ -12,6 +12,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/post-list/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/tag-list/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/menu/style.css'; ?>">
+
     <!-- lấy style.css và các meta tag khác từ plugin -->
     <?php wp_head(); ?>
 

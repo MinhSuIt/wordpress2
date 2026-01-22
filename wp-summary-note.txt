@@ -1,0 +1,416 @@
+AI hỗ trợ chỉ cần tầm trung, như chatgpt bản free vẫn ok, lí do vì nền tảng wordpress cực kì ổn định và đã trưởng thành ít thay đổi
+Có 2 cách chuyển figma sang code: 
+	Figma MCP Server (tốn phí figma pro) + AI (tốn phí AI)
+	Dùng plugin có sẵn chuyển figma to html
+thư viện css: 
+	aos : animate on scroll
+	ScrollReveal
+	WOW.js + Animate.css
+	GSAP + ScrollTrigger 
+dùng laragon dev cho nhẹ và tránh lỗi permission khi install plugin, khi lên prod thì vẫn dùng laradock đc
+code html css js trước giao diện từ figma/bất cứ gì
+template hierarchy wordpress: ưu tiên các file từ bên phải để code cho nhiều page 1 lúc
+underscore theme
+tạo child theme từ underscore
+kích hoạt và cấu hình logo, icon cho theme
+cài đặt > chung > múi giờ +7
+Cài đặt đọc: cài đặt trang home là 1 trang page tĩnh trong admin bao gồm trang shop của woocommerce hoặc dùng template hierarchy wordpress
+cài đặt cấu trình đường dẫn:
+	Cấu trúc đường dẫn cố định: Tiêu đề bài viết http://wordpress1.test/bai-mau/
+	Đường dẫn danh mục: danh-muc
+	Đường dẫn thẻ: the
+	Media: ko dùng Sắp xếp các tập tin theo thư mục dựa trên năm, tháng
+	Bình luận: tùy từng case
+		Thử gửi thông báo tới bất kỳ blog/website nào khác được bài viết này liên kết tới: No
+		Cho phép thông báo liên kết từ các blog khác (pingback và trackbacks) trên các bài viết mới: No
+		Cho phép mọi người gửi bình luận về bài viết mới: Yes/No
+
+		Tác giả bình luận phải điền tên và email: Yes
+ 		Người dùng phải đăng ký và đăng nhập để bình luận: Yes
+		
+		Gửi email cho tôi khi: Tùy case
+			Có ai đó vừa bình luận
+ 			Một bình luận đang chờ duyệt
+ 			Anyone posts a note
+
+
+Nhúng reset css vào header.php child theme:
+<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+Tạo category theo giao diện, danh mục chưa phân loại ko thể xóa, đổi tên lại là xong
+Tạo Menu theo cấu hình underscore: thêm category vào menu
+Tạo post, tag cho post để fetch data về sau
+Custom page màu xanh lá template-hierarchy bằng code:
+front-page.php
+category.php
+tag.php
+single-post.php
+
+the_custom_logo() lấy logo
+wp_nav_menu() lấy menu dựa theo class gốc Walker_Nav_Menu của wordpress nhờ chatgpt
+wp_enqueue_style load css
+wp_enqueue_script load js, nếu cần async defer thì dùng: 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/counterup/jquery.counterup.min.js" defer></script>
+
+
+wp_deregister_script('jquery'); ko dùng jquery của wordpress mặc định
+wp mặc định dùng jquery có liên quan đến các plugin như Query monitor nên nếu bỏ mặc định bằng wp_deregister_script sẽ gây lỗi
+
+tạo thêm các thư mục:
+	custom: viết code thêm code như helper
+
+debug:
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );     // ghi lỗi vào file
+define( 'WP_DEBUG_DISPLAY', false ); // không hiển thị lỗi lên trình duyệt
+@ini_set( 'display_errors', 0 );
+
+error_log('Đây là một thông báo debug trong tệp debug.log');
+get_theme_mod('?',default value); lấy các giá trị cấu hình của theme
+get_option() lấy giá trị option cấu hình trong cài đặt như cấu hình bao nhiêu post mỗi lần query
+chatgpt chuyển html sang wordpress: dùng mẫu html sau đây để hiển thị ???
+
+kết hợp các plugin phổ biến cài theo thứ tự:
+Query Monitor
+Show Current Template
+Simply Show Hooks github/WP Hooks Finder: hiển thị các hook, đa phần ko dùng
+
+Custom Post Type UI (CPT UI) : tạo ra các type khác post/page
+	Chú ý: Basic settings các phần khác bỏ qua
+Advanced Custom Fields (ACF) : custom field cho Custom Post Type UI và tạo taxonomy tương tự category và tag cho post
+	Tạo các nhóm field sau đó ở điều kiện thì gắn nó với post type đã tạo từ Custom Post Type UI
+	Nhờ AI tạo code từ html mẫu với WP_Query post_type=slug đã tạo
+	Nhờ AI Thêm các cột vào trang danh sách CPT 'testimonial' trong Admin
+
+	Thêm taxonomy cho Custom Post Type vừa tạo
+	Nhờ AI Thêm các cột vào trang danh sách CPT 'testimonial' trong Admin
+	=> vào lại custom post type đã thêm taxonomy sẽ có cột để thêm taxonomy
+	Custom lại các trang woocommerce bằng cách copy:
+		wp-content/plugins/woocommerce/templates/
+		=> yourtheme-child/woocommerce/
+
+		| Loại trang                  | Template override khả dụng   |
+		| --------------------------- | ---------------------------- |
+		| Shop page / product archive | `archive-product.php`        |
+		| Product category archive    | `taxonomy-product_cat.php`   |
+		| Product tag archive         | `taxonomy-product_tag.php`   |
+		| Single product              | `single-product.php`         |
+		| Cart                        |               		     |	
+		ở admin trang cart đang đc thiết kế bằng giao diện, xóa nội dung đi, 
+		thay vào đó tạo page-cart.php (gọi echo do_shortcode('[woocommerce_cart]'); sẽ hiển thị `cart/cart.php`) là cart page template rồi gán template đó cho trang cart ở admin
+		| Checkout                    |  			     |
+		tương tự trang cart phải tạo Checkout Page Template và echo do_shortcode('[woocommerce_checkout]'); sẽ dùng `checkout/form-checkout.php`
+		| My Account                  |    			     |
+		tương tự trang cart phải tạo My Account Page Template và echo do_shortcode('[woocommerce_my_account]'); sẽ dùng `myaccount/my-account.php`
+		Ngoài ra còn các trang Chính sách bảo mật, Chính sách đổi trả hàng
+		woocommerce được tổ chức theo:
+			wp-content/plugins/woocommerce/templates/ chỉ bao gồm các file component, dùng wc_get_template để truyền args vào các component
+			tên file là routing
+			hook là tách các chức năng ra thành nhiều component 
+			add_action, remove_action, do_action, add filter, remove_filter, apply_filters để custom lại
+			kết hợp với plugin show current template để biết các file nào trong wp-content/plugins/woocommerce/templates/ được gọi để custom nhanh
+		ý nghĩa các folder trong thư mục templates:
+			content-? : file nằm trong vòng lặp
+				content-product: ở trang shop/archive page/những chỗ hiển thị danh sách sản phẩm (ví dụ sản phẩm tương tự của trang single-product)
+				content-product-cat: ở trang danh mục sản phẩm 
+				content-single-product: ở trang sản phẩm cụ thể
+				taxonomy-product-[cat/tag/attribute]: trang danh mục/tag/attribute (archive page)
+			global : dùng cho nhiều trang cẩn thận khi sửa
+				breadcrumb
+				sidebar
+				wrapper-[start/end]: xuất hiện sau header (get_header) và trước footer (get_footer)
+					thường sẽ xóa ko dùng
+			loop: template cho vòng lặp sản phẩm
+				result-count: đếm số sản phẩm được hiển thị ở trang shop/archive page
+				orderby: bộ sắp xếp ở trang shop/archive page
+				pagination: phân trang ở trang shop/archive page
+				add-to-cart: nút add to cart
+				header: là banner dưới breadcrumb
+				loop-[start/end]: wrapper trước/sau vòng lặp hiển thị danh sách sản phẩm ở shop/archive page/list sản phẩm tương tự ...
+				no-products-found: khi hiển thị danh sách sản phẩm mà ko có sản phẩm nào
+				price: hiển thị giá của sản phẩm khi hiển thị danh sách sản phẩm
+				rating: hiển thị đánh giá của sản phẩm khi hiển thị danh sách sản phẩm
+				sale-flash: hiển thị bag giảm giá của sản phẩm khi hiển thị danh sách sản phẩm
+			cart: cho trang cart
+			checkout: cho trang checkout
+				order-received: sau khi đặt hàng
+			myaccount: cho trang myaccount
+			order: cho trang thông tin đơn hàng
+			single-product: cho trang sản phẩm đơn
+
+***Sau khi xong thì có thể vào Tool của Custom post type UI và Advanced custom field export code ra dán vào functions.php sau đó deactive Custom post type UI
+Woocommerce
+	Thiết lập tổng quan
+	Thiết lập cài đặt chung
+		Địa chỉ cửa hàng: VN
+		Bán chỉ một số khu vực: VN
+		Vị trí giao hàng: VN
+		Đơn vị tiền tệ: VND
+		Hiển thị cửa hàng: Đang bán
+		Vận chuyển
+			VN free shipping
+		Phương thức thanh toán
+			Thực hiện thanh toán ngoại tuyến: Thanh toán khi nhận hàng (COD)
+		Thuế: nếu cần, đa phần ko
+			Nếu dùng: Thì ở cài đặt chung phải Kích hoạt thuế
+	Công cụ: Nhập dữ liệu sản phẩm nếu cần từ csv
+	Thêm các trang woocommerce vào menu
+
+	Thêm support cho woocommerce để custom template:
+	function theme_add_woocommerce_support() {
+		add_theme_support( 'woocommerce', array(
+			'thumbnail_image_width' => 150,
+			'single_image_width'    => 300,
+
+			'product_grid'          => array(
+				'default_rows'    => 3,
+				'min_rows'        => 2,
+				'max_rows'        => 8,
+				'default_columns' => 4,
+				'min_columns'     => 2,
+				'max_columns'     => 5,
+			),
+		) );
+	}
+	add_action( 'after_setup_theme', 'theme_add_woocommerce_support' );
+
+	
+
+Meta Box Thay thế ACF
+
+
+WP Migrate Lite
+WP Mail SMTP (cần domain thật)
+WPForms – Easy Form Builder for WordPress – Contact Forms, Payment Forms, Surveys, & More : cần domain thật mới install plugin được
+	Tạo form: rồi thêm các field cần thiết
+	Cài WP Mail SMTP (cần domain thật) để khi có người submit form sẽ gửi mail thông báo: WPForms > SMTP > Chọn brevo 
+		
+Plugin gửi mail: WP Mail SMTP của WPForms : yêu cầu domain thật
+Plugin Subscribe/Newsletter: MailPoet – Newsletters, Email Marketing, and Automation : yêu cầu domain thật mới install plugin được
+rank math
+Redis cache
+Easy table of contents: tạo table cho post/page hay bất kì custom post type khác
+AddToAny Share Buttons: các nút bấm share
+Theme Check của wordpress: kiểm tra theme có lỗi đáng ngờ ko trước khi submit lên wordpress theme: Giao diện > Theme check
+
+
+
+translate thư mục nằm trong thư mục theme hiện tại/languages/?.pot
+	với woocommerce thì nằm ở i18n/languages/woocommerce.pot
+
+Hỗ trợ Woocommerce widget variation product nhiều thuộc tính ở trang sản phẩm cụ thể: 
+	Variation Swatches for WooCommerce: 
+		ô vuông, có tooltip, gói free nhiều chức năng hơn YITH, ko bị giật như YITH
+
+	Phân biệt 2 loại thuộc tính
+	🟡 1) Global Attribute (thuộc tính toàn cục): hỗ trợ Woocommerce widget variation product nhiều thuộc tính
+
+	Tạo trong Products → Attributes
+
+	Lưu ở cấp taxonomy (pa_color, pa_size, v.v.)
+
+	Có thể chọn trong sản phẩm variable bằng dropdown “Add existing”
+
+	🔵 2) Custom/Product-specific Attribute: Ko hỗ trợ
+
+	Tạo trực tiếp trong trang sửa sản phẩm bằng nút “Add new” trong tab Attributes
+
+	Áp dụng chỉ cho sản phẩm đó
+
+	Không phải là global taxonomy, nên:
+	✔ Nó vẫn lưu cho sản phẩm
+	❌ Nhưng không có trong danh sách search bộ thuộc tính để chọn lại
+	❌ Không lọc hoặc gợi ý theo nguyên tắc global taxonomy
+
+	Nếu bạn tạo attribute ở product level thì nó không nằm trong danh sách global → search không tìm ra.
+	➡ WooCommerce chỉ gợi ý các attribute được tạo qua Products → Attributes
+
+	****Nếu khi chọn sản phẩm biến thể mà list attribute ko hiển thị thì tạo sản phẩm đơn giản trước rồi thêm các thuộc tính vào sau đó chuyển sang sản phẩm biến thể
+	****Cách custom widget variation product nhiều thuộc tính:
+			class-woo-variation-swatches-product-page.php:
+				wrapper_start/end
+				item_start/end
+				custom class cho wrapper tổng của tất cả attribute:
+					woo_variation_swatches_single_product_wrapper_attributes
+						add_filter(
+							'woo_variation_swatches_single_product_wrapper_attributes',
+							function ($attrs, $product) {
+
+								if (!isset($attrs['class'])) {
+									$attrs['class'] = '';
+								}
+
+								$attrs['class'] .= ' my-custom-wrapper';
+
+								return $attrs;
+							},
+							10,
+							2
+						);
+
+				custom attribute cho từng item ko quan tâm loại gì, nhưng ko nên custom class:
+					add_filter(
+						'woo_variation_swatches_variable_item_custom_attributes',
+						function ($attrs, $data) {
+
+							$attrs['data-label'] = $data['option_name'];
+							$attrs['data-attr']  = $data['attribute_key'];
+							$attrs['class'] .= "abc"; // ko nên dùng
+							return $attrs;
+						},
+						10,
+						2
+					);
+				custom class cho item trong swatches:
+					add_filter(
+						'woo_variation_swatches_variable_item_css_class',
+						function ($classes, $data, $type) {
+
+							if ($data['attribute_key'] === 'pa_color') {
+								$classes[] = 'is-color-swatch';
+							}
+
+							return $classes;
+						},
+						10,
+						3
+					);
+				custom cụ thể cho item dạng color/image/button/radio:
+					woo_variation_swatches_color_attribute_template
+					woo_variation_swatches_image_attribute_template
+					woo_variation_swatches_button_attribute_template
+					woo_variation_swatches_radio_attribute_template
+
+				woo_variation_swatches_global_item_radio_label_template
+
+				custom template cấu trúc html cho tất cả button:
+					add_filter(
+						'woo_variation_swatches_button_attribute_template',
+						function ($template, $data) {
+
+							return '<span class="variable-item-span variable-item-span-button">
+										%s <small class="badge">HOT</small>
+									</span>';
+						},
+						10,
+						2
+					);
+
+				custom class cho tooltip
+					add_filter(
+						'woo_variation_swatches_global_variable_item_tooltip_text',
+						function ($tooltip, $data) {
+
+							if (!empty($data['variation_image_id'])) {
+								return $tooltip . ' – Click để xem ảnh';
+							}
+
+							return $tooltip;
+						},
+						10,
+						2
+					);
+	Custom sẵn mẫu, có gì lấy ra xài nhanh hơn
+Hỗ trợ Woocommerce widget bộ lọc sản phẩm:
+	YITH WooCommerce Ajax Product Filter: ko lọc theo price
+	Product Filter by WBW
+	HUSKY – Products Filter Professional for WooCommerce (Ưu tiên): cho phép khởi tạo short_code/kéo thả để hiển thị widget
+		Cài đặt widget options:
+			search form: hiển thị search form ko
+			Dynamic recount: default
+			Autosubmit:false sẽ có nút filter, sau khi chọn các loại filter và bấm vào mới filter
+			Submit button position:vị trí nút filter: top and bottom
+			Form AJAX redrawing: No
+			Mobile mode: true Tạo 1 nút bấm vào sẽ mở bộ lọc, giúp gọn hơn
+		Cài đặt plugin theo:
+			Price: ion range slider
+			Instock Yes, có 2 dạng Checkbox (nên dùng cho đơn giản)/Switcher
+			On Sale: Yes, có 2 dạng Checkbox/Switcher
+			Danh mục: Radio
+			Brand: Checkbox/Radio
+			Search
+			Attributes: Checkbox/Radio/Label
+
+			Các component hiển thị filter nằm ở folder ext/?/views/woof.php
+
+			Overwrite các component này bằng: 
+				plugins/woocommerce-products-filter/ext/by_instock/views/woof.php
+				=> wp-content/themes/your-child-theme/woof/ext/by_instock/views/woof.php
+				chỉ những phần nằm trong ext/.../views/woof.php được hỗ trợ.
+
+				đã check:
+					Price: woocommerce-products-filter/views/woof.php
+						ion range slider : woof_price3_search_container
+						do_shortcode woof_price_filter 
+						rất khó custom chỉ có thể dựa vào CSS, vì plugin chỉ cho overwrite ở thư mục ext
+					by_instock
+					by_onsales
+					Danh mục,Brand: taxonomy của product
+						Radio: woocommerce-products-filter/views/html_types/radio.php
+						Checkbox: woocommerce-products-filter/views/html_types/checkbox.php
+						rất khó custom chỉ có thể dựa vào CSS, vì plugin chỉ cho overwrite ở thư mục ext
+					search: by_text/shortcodes/woof_text_filter.php
+						rất khó custom chỉ có thể dựa vào CSS, vì plugin chỉ cho overwrite ở thư mục ext
+					Attributes
+						Radio: woocommerce-products-filter/views/html_types/radio.php
+						Checkbox: woocommerce-products-filter/views/html_types/checkbox.php
+						rất khó custom chỉ có thể dựa vào CSS, vì plugin chỉ cho overwrite ở thư mục ext
+
+	****Custom giao diện CSS,JS cho HUSKY: 	Custom sẵn mẫu, có gì lấy ra xài nhanh hơn
+		classes/widgets.php : gồm 2 thành phần:
+			thông số lọc hiện tại
+			bộ lọc
+		
+		Custom khi attribute là color như nào
+function: tái sử dụng nhiều nơi trong code cho dev
+shortcode: tái sử dụng nhiều nơi trong code và tùy chỉnh trên giao diện cho dev (tập trung viết các shortcode cơ bản có khả năng dùng lại ở nhiều nơi)
+widget: tái sử dụng tốt hơn shortcode cho dev và user
+Smart App Control: Tắt đi nếu cần cài Filezilla
+Lập trình plugin với: https://wppb.me/ lấy template từ WordPress-Plugin-Boilerplate:
+	Khi nào cần lập trình plugin: 
+		xử lý case phức tạp mà Custom post type UI và advanced custom field ko xử lý đc
+		khi cần code widget, tái sử dụng widget trong nhiều theme, hay dùng với dynamic_sidebar
+			add_filter( 'use_widgets_block_editor', '__return_false' ); // dùng block editor mới cho phép kéo thả widget, có lỗi form bị biến mất khi lần đầu kéo thả, refresh page là đc
+			kéo thả widget vừa tạo vào nó rồi đăng ký hook add_action('woocommerce_sidebar','?',10) trong functions.php
+			đăng ký cho plugin sử dụng widget ở tên-plugin.php vì widget dùng cho cả admin và public:
+				// load widget
+				require_once plugin_dir_path( __FILE__ ) . 'custom-widget/simple-text-widget.php';
+				// Register widget
+				function plugin_1_register_widgets() {
+					register_widget( 'Simple_Text_Widget' );
+				}
+				add_action( 'widgets_init', 'plugin_1_register_widgets' );
+
+	File khởi đầu của plugin: [tên plugin].php chứa thông tin plugin và cấu hình chung cho cả admin và giao diện user
+	File gỡ cài đặt: uninstall.php
+	Thư mục admin: liên quan đến giao diện admin
+		Bên trong có file admin/class-[tên-plugin]-admin.php sẽ chứa các function đăng ký add_action, add_filter
+	Thư mục public: liên quan đến giao diện người dùng
+		Bên trong có file public/class-[tên-plugin]-public.php sẽ chứa các function đăng ký add_action, add_filter
+	Thư mục includes:
+		includes/class-[tên-plugin].php : xử lý các chức năng tương tự functions.php của theme, cực quan trọng như thêm item sidebar cho admin
+			load_dependencies: require các file vào
+			define_admin_hooks và define_public_hooks: thêm hook cho admin/giao diện người dùng
+
+	Các bước kết hợp: 
+		includes/class-[tên-plugin].php
+		admin/class-[tên-plugin]-admin.php / public/class-[tên-plugin]-public.php
+		includes/class-[tên-plugin].php : define_admin_hooks / define_public_hooks
+		admin/partials/[tên-plugin]-admin-display.php : là file view cho admin / public/partials/[tên-plugin]-public-display.php : là file view cho trang user
+		[tên plugin].php : cấu hình chung cho giao diện cả admin và user
+
+
+includes/[activator/deactivator].php : thiết lập khi active và deactive plugin
+	
+
+
+
+Các cách dev:
+Widget / Block rồi kéo thả
+Theme thuần
+Elementor
+Dùng WP làm backend API, frontend dùng Next...
+FSE / Block Theme ──> WordPress tương lai
+Hybrid (thường dùng nhất): Dev theme base, Code widget riêng tùy nhu cầu custom của khách, cho họ điền thông tin text/kéo thả (Gutenberg, Elementor)
+underscore code theme > flatsome ux builder (có phí) > elementor (nested html)
+
+Dưới 15tr làm wordpress, trên thì dùng framework

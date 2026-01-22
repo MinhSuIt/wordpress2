@@ -3,3 +3,21 @@
 [19-Jan-2026 15:46:12 UTC]   Automatic plugin updates starting...
 [19-Jan-2026 15:46:12 UTC]   Automatic plugin updates complete.
 [19-Jan-2026 15:46:12 UTC] Automatic updates complete.
+[21-Jan-2026 13:37:15 UTC] Automatic updates starting...
+[21-Jan-2026 13:37:16 UTC]   Automatic plugin updates starting...
+[21-Jan-2026 13:37:16 UTC]   Automatic plugin updates complete.
+[21-Jan-2026 13:37:18 UTC] Automatic updates complete.
+[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 478
+[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 479
+[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 478
+[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 479
+[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
+[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
+[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
+[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
+[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
+[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
+[21-Jan-2026 16:52:40 UTC] Automatic updates starting...
+[21-Jan-2026 16:52:42 UTC]   Automatic plugin updates starting...
+[21-Jan-2026 16:52:42 UTC]   Automatic plugin updates complete.
+[21-Jan-2026 16:52:44 UTC] Automatic updates complete.

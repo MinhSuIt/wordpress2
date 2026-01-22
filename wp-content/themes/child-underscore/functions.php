@@ -10,6 +10,9 @@ $requires = [
     '/custom/ajax.php',
 
     '/shortcodes/woocommerce.php',
+    '/base/template-parts/post-list/set-up.php',
+    '/base/shortcodes/post-list.php',
+    '/base/shortcodes/tag-list.php',
 ];
 
 foreach ($requires as $file) {
