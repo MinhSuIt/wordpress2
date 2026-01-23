@@ -8,6 +8,10 @@ thư viện css:
 	WOW.js + Animate.css
 	GSAP + ScrollTrigger 
 dùng laragon dev cho nhẹ và tránh lỗi permission khi install plugin, khi lên prod thì vẫn dùng laradock đc
+// Ngăn truy cập trực tiếp cho các file php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
 code html css js trước giao diện từ figma/bất cứ gì
 template hierarchy wordpress: ưu tiên các file từ bên phải để code cho nhiều page 1 lúc
 underscore theme
