@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/post-list/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/tag-list/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/menu/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/call-button/style.css'; ?>">
 
     <!-- lấy style.css và các meta tag khác từ plugin -->
     <?php wp_head(); ?>

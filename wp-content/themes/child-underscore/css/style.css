@@ -1424,27 +1424,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.call-button {
-    position: fixed;              /* Đặt nút ở vị trí cố định */
-    bottom: 30%;                 /* Cách đáy 20px */
-    right: 2%;                  /* Cách phải 20px */
-    background-color: #28a745;    /* Màu nền nút */
-    color: white;                 /* Màu chữ */
-    padding: 15px;           /* Khoảng cách bên trong nút */
-    border-radius: 50px;          /* Bo tròn góc */
-    font-size: 18px;              /* Kích thước chữ */
-    text-decoration: none;        /* Xóa gạch chân */
-    display: flex;                /* Đặt icon và chữ cùng hàng */
-    align-items: center;          /* Căn giữa theo chiều dọc */
-    justify-content: center;      /* Căn giữa theo chiều ngang */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
-    transition: all 0.3s ease;    /* Hiệu ứng khi hover */
-}
-
-.call-button:hover {
-    background-color: #218838;    /* Màu khi hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng đậm hơn khi hover */
-}
 
 
 /* woocommerce */

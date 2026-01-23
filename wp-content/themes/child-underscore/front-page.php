@@ -389,5 +389,5 @@ get_footer();
 get_template_part('base/template-parts/menu/index');
 
 ?>
-<?php echo do_shortcode('[post_list_shortcode]'); ?>
+<?php echo do_shortcode("[post_list_shortcode class='custom-class' post_type='post' posts_per_page=2 meta_key='post_views_count' orderby='meta_value_num' order='DESC']"); ?>
 <?php echo do_shortcode('[tag_list_shortcode]'); ?>

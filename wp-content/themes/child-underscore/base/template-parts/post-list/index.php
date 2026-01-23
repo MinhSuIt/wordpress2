@@ -1,27 +1,20 @@
 <!-- get_template_part('base/template-parts/post-list/index'); -->
 <?php
-$args = array(
-    'post_type'      => 'post',
-    'posts_per_page' => 10,
-    'meta_key'       => 'post_views_count',
-    'orderby'        => 'meta_value_num',
-    'order'          => 'DESC'
-);
-
-$top_query = new WP_Query($args);
+$class = esc_attr($args['class'] ?? '');
+$query = $args['query'] ?? null;
 ?>
 
-<div class="post-list">
+<div class="post-list <?php echo $class; ?>">
     <div class="header">
         <span class="header-icon"><img draggable="false" role="img" class="emoji" alt="🔥" src="https://s.w.org/images/core/emoji/17.0.2/svg/1f525.svg"></span>
-        TOP 10 TÀI APP THÁNG
+        TOP 10 TẢI APP THÁNG
     </div>
 
     <ul class="list">
         <?php
         $i = 1;
-        if ($top_query->have_posts()) :
-            while ($top_query->have_posts()) : $top_query->the_post();
+        if ($query && $query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
                 $views = get_post_meta(get_the_ID(), 'post_views_count', true);
         ?>
 

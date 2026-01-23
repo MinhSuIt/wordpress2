@@ -6,4 +6,6 @@ function tag_list_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode('tag_list_shortcode', 'tag_list_shortcode');
-// Usage: <?php echo do_shortcode('[tag_list_shortcode]'); ?>
+// Usage: 
+// trong code: <?php echo do_shortcode('[tag_list_shortcode]'); ?>
+<!-- // trong trình soạn thảo: [tag_list_shortcode] -->
