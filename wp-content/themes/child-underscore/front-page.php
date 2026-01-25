@@ -54,7 +54,7 @@
 <!-- Section Intro END -->
 <!-- Section About Start -->
 
-<section class="section about position-relative">
+<section class="section about position-relative" id="top">
     <div class="bg-about"></div>
     <div class="container">
         <div class="row">
@@ -382,12 +382,62 @@ get_sidebar(); // sidebar.php, get_sidebar('footer');   // sẽ lấy sidebar-fo
 //     dynamic_sidebar('sidebar-1');
 // }
 
-get_footer();
-
+echo do_shortcode("[panel_post_list_shortcode class='panel_post_list_shortcode-custom-class' post_type='post' posts_per_page=2 meta_key='post_views_count' orderby='meta_value_num' order='DESC']");
+echo do_shortcode('[panel_tag_list_shortcode]');
+echo do_shortcode('[scroll_to_shortcode class="custom-class" id="top" class="custom-class"]');
+echo do_shortcode("[post_list_shortcode class='custom-class' post_type='post' cat_id=1]");
+echo do_shortcode("[gallery_lightbox_shortcode class='custom-class' 
+a='http://wordpress2.test/wp-content/uploads/2025/01/3.jpg' 
+b='http://wordpress2.test/wp-content/uploads/2026/01/1.jpg' 
+c='http://wordpress2.test/wp-content/uploads/2026/01/2.jpg']");
+echo do_shortcode("[accordion_shortcode class='custom-class' title-1='Accordion item 1' title-2='Accordion item 2' title-3='Accordion item 3' template-1='template-1' template-2='template-2' template-3='template-3']");
+echo do_shortcode('[slider_shortcode 
+    class="custom-class" 
+    title-1="Siêu phẩm máy móc" 
+    img-1="https://picsum.photos/id/237/600/400" 
+    url-1=""
+    title-2="Du lịch khám phá" 
+    img-2="https://picsum.photos/id/238/600/400" 
+    url-2="#"
+    title-3="Thiên đường ẩm thực"
+    img-3="https://picsum.photos/id/239/600/400" 
+    url-3="#"
+    title-4="Phong cảnh tuyệt đẹp"
+    img-4="https://picsum.photos/id/240/600/400" 
+    url-4="#"
+    title-5="Cuộc sống hiện đại"
+    img-5="https://picsum.photos/id/241/600/400" 
+    url-5="#"
+    title-6="Công nghệ tiên tiến"
+    img-6="https://picsum.photos/id/242/600/400" 
+    url-6="#"
+    title-7="Khám phá vũ trụ"
+    img-7="https://picsum.photos/id/243/600/400" 
+    url-7="#"
+    title-8="Nghệ thuật sáng tạo"
+    img-8="https://picsum.photos/id/244/600/400" 
+    url-8="#"
+]');
+echo do_shortcode("[tabs_shortcode 
+    class='custom-class' 
+    title-1='Tab 1' 
+    tab-1='tab-1' 
+    title-2='Tab 2' 
+    tab-2='tab-2' 
+    title-3='Tab 3' 
+    tab-3='tab-3'
+    title-4='Tab 4' 
+    tab-4='tab-4'
+]");
 // get_template_part('base/template-parts/post-list/index');
 // get_template_part('base/template-parts/tag-list/index');
-get_template_part('base/template-parts/menu/index');
-
+// get_template_part('base/template-parts/menu/index');
+// get_template_part('base/template-parts/scroll-to/index', null, ['id' => 'top', 'class' => 'custom-class']);
+// get_template_part('base/template-parts/post-list/index');
+// get_template_part('base/template-parts/gallery-lightbox/index');
+// get_template_part('base/template-parts/accordion/index');
+// get_template_part('base/template-parts/slider/index');
+// get_template_part('base/template-parts/tabs/index');
+get_template_part('base/template-parts/breadcrumb/index', null, ['class' => 'custom-class', 'title-1' => 'Trang chủ', 'title-2' => 'Danh mục', 'title-3' => 'Bài viết hiện tại', 'path-1' => '#', 'path-2' => '#', 'path-3' => '#']);
+get_footer();
 ?>
-<?php echo do_shortcode("[post_list_shortcode class='custom-class' post_type='post' posts_per_page=2 meta_key='post_views_count' orderby='meta_value_num' order='DESC']"); ?>
-<?php echo do_shortcode('[tag_list_shortcode]'); ?>

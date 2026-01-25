@@ -1,11 +1,18 @@
-/* ===== NAVBAR ===== */
-.navbar {
+:root {
+    --header-height: 66px;
+}
+
+.navbar-custom {
     background: #1a1a1a;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 9999999;
+    height: var(--header-height);
 
     .navbar-logo {
         font-size: 1.5rem;
@@ -14,7 +21,6 @@
         text-decoration: none;
     }
 
-    /* ===== MENU ===== */
     .nav-menu {
         display: flex;
         list-style: none;
@@ -35,7 +41,6 @@
                 }
             }
 
-            /* ===== SUBMENU DESKTOP ===== */
             .submenu {
                 position: absolute;
                 top: 100%;
@@ -70,7 +75,6 @@
             }
         }
 
-        /* ===== SEARCH ===== */
         .search-item {
             margin-left: 1rem;
 
@@ -79,7 +83,7 @@
                 align-items: center;
                 background: #2a2a2a;
                 border-radius: 6px;
-                padding: .4rem .7rem;
+                padding: 0 .5rem;
 
                 input {
                     background: transparent;
@@ -101,7 +105,6 @@
         }
     }
 
-    /* ===== HAMBURGER ===== */
     .hamburger {
         display: none;
         flex-direction: column;
@@ -118,10 +121,8 @@
     }
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-    .navbar {
+    .navbar-custom {
         padding: 1rem;
 
         .hamburger {
@@ -130,15 +131,17 @@
 
         .nav-menu {
             position: fixed;
-            top: 60px;
-            left: -100%;
+            top: var(--header-height);
+            left: 0;
             flex-direction: column;
             width: 100%;
             background: #1a1a1a;
             transition: .4s;
             opacity: 0;
+            z-index: 9999999;
+
             &.active {
-                left: 0;
+
                 opacity: 1;
             }
 
@@ -153,8 +156,9 @@
                 }
 
                 &.has-submenu>.nav-link::after {
-                    content: "▼";
+                    content: "\25BC";
                     font-size: .6rem;
+                    transition: all 1s ease;
                 }
 
                 &.has-submenu>.nav-link.active::after {

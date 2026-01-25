@@ -10,13 +10,20 @@ $requires = [
     '/custom/ajax.php',
 
     '/shortcodes/woocommerce.php',
-    '/base/template-parts/post-list/set-up.php',
+    '/base/template-parts/panel-post-list/set-up.php',
+    '/base/shortcodes/panel-post-list.php',
+    '/base/shortcodes/panel-tag-list.php',
+    '/base/template-parts/menu/set-up.php',
+    '/base/shortcodes/menu.php',
+    '/base/shortcodes/call-button.php',
+    '/base/shortcodes/scroll-to.php',
     '/base/shortcodes/post-list.php',
-    '/base/shortcodes/tag-list.php',
+    '/base/shortcodes/gallery-lightbox.php',
+    '/base/shortcodes/accordion.php',
+    '/base/shortcodes/slider.php',
+    '/base/shortcodes/tabs.php',
 ];
 
 foreach ($requires as $file) {
     require_once get_stylesheet_directory() . $file;
 }
-
-

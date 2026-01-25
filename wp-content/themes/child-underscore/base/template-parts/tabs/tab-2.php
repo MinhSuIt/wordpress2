@@ -1,0 +1,1 @@
+<p>Đây là nội dung của tab 2.</p>

@@ -12,10 +12,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/post-list/style.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/tag-list/style.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/menu/style.css'; ?>">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/base/template-parts/call-button/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/panel-post-list/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/panel-tag-list/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/menu/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/call-button/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/scroll-to/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/post-list/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/gallery-lightbox/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/accordion/style.css'; ?>">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/slider/style.css'; ?>">
+
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/tabs/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/breadcrumb/style.css'; ?>">
+
 
     <!-- lấy style.css và các meta tag khác từ plugin -->
     <?php wp_head(); ?>
@@ -23,13 +34,15 @@
 </head>
 
 <!-- body_class phải có -->
+
 <body <?php body_class(); ?>>
     <!-- wp_body_open phải có hiển thị các bar của plugin Query Monitor/Show Current Template/... -->
-    <?php wp_body_open(); ?> 
+    <?php wp_body_open(); ?>
 
     <!-- Header Start -->
+    <?php echo do_shortcode('[menu_shortcode]'); ?>
 
-    <header class="navigation">
+    <!-- <header class="navigation">
         <div class="header-top ">
             <div class="container">
                 <div class="row justify-content-between align-items-center">
@@ -68,30 +81,6 @@
                         'walker'         => new Main_Nav_Walker(),
                     ]);
                     ?>
-                    <!-- <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                <li><a class="dropdown-item" href="about.html">Our company</a></li>
-                                <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="project.html">Portfolio</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown05">
-                                <li><a class="dropdown-item" href="blog-grid.html">Blog Grid</a></li>
-                                <li><a class="dropdown-item" href="blog-sidebar.html">Blog with Sidebar</a></li>
-
-                                <li><a class="dropdown-item" href="blog-single.html">Blog Single</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    </ul> -->
 
                     <form class="form-lg-inline my-2 my-md-0 ml-lg-4 text-center">
                         <a href="#" class="btn btn-solid-border btn-round-full">Get a Quote</a>
@@ -99,7 +88,7 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header> -->
 
     <!-- Header Close -->
     <div class="main-wrapper">

@@ -1,0 +1,1 @@
+<p>Nội dung accordion 3. Bạn có thể để text, hình ảnh, HTML bất kỳ.</p>

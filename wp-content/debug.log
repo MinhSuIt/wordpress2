@@ -1,23 +1,25 @@
-[19-Jan-2026 14:39:54 UTC] Lỗi hủy lịch sự kiện Cron cho hook: wp_1_wc_privacy_cleanup_cron, Mã lỗi: could_not_set, Thông báo lỗi: Không thể lưu danh sách sự kiện cron., Dữ liệu: {"schedule":"wp_1_wc_privacy_cleanup_cron_interval","args":[],"interval":300}
-[19-Jan-2026 15:46:12 UTC] Automatic updates starting...
-[19-Jan-2026 15:46:12 UTC]   Automatic plugin updates starting...
-[19-Jan-2026 15:46:12 UTC]   Automatic plugin updates complete.
-[19-Jan-2026 15:46:12 UTC] Automatic updates complete.
-[21-Jan-2026 13:37:15 UTC] Automatic updates starting...
-[21-Jan-2026 13:37:16 UTC]   Automatic plugin updates starting...
-[21-Jan-2026 13:37:16 UTC]   Automatic plugin updates complete.
-[21-Jan-2026 13:37:18 UTC] Automatic updates complete.
-[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 478
-[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 479
-[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 478
-[21-Jan-2026 14:04:11 UTC] PHP Warning:  Undefined array key "taxonomy" in C:\laragon\www\wordpress2\wp-content\plugins\copy-delete-posts\post\handler.php on line 479
-[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
-[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
-[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
-[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
-[21-Jan-2026 14:21:40 UTC] PHP Warning:  Undefined variable $thumb_url in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\post-list\index.php on line 35
-[21-Jan-2026 14:21:40 UTC] PHP Deprecated:  ltrim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\laragon\www\wordpress2\wp-includes\formatting.php on line 4496
-[21-Jan-2026 16:52:40 UTC] Automatic updates starting...
-[21-Jan-2026 16:52:42 UTC]   Automatic plugin updates starting...
-[21-Jan-2026 16:52:42 UTC]   Automatic plugin updates complete.
-[21-Jan-2026 16:52:44 UTC] Automatic updates complete.
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-0" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-1" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-2" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-3" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-4" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-5" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-0" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-1" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-2" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-3" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-4" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-5" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
+[25-Jan-2026 14:19:26 UTC] PHP Warning:  Undefined array key "file" in C:\laragon\www\wordpress2\wp-content\plugins\query-monitor\dispatchers\Html.php on line 1021
+[25-Jan-2026 14:19:26 UTC] PHP Warning:  Undefined array key "line" in C:\laragon\www\wordpress2\wp-content\plugins\query-monitor\dispatchers\Html.php on line 1021
+[25-Jan-2026 16:11:41 UTC] Automatic updates starting...
+[25-Jan-2026 16:11:43 UTC]   Automatic plugin updates starting...
+[25-Jan-2026 16:11:43 UTC]   Automatic plugin updates complete.
+[25-Jan-2026 16:11:44 UTC] Automatic updates complete.
+[25-Jan-2026 17:14:10 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:15:03 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:16:20 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:16:57 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:17:33 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:18:18 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[25-Jan-2026 17:19:18 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185

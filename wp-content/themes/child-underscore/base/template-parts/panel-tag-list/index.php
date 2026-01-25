@@ -1,4 +1,9 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly
+}
+?>
+<?php
 $tags = get_tags(array(
     'orderby'    => 'count',
     'order'      => 'DESC',
@@ -6,7 +11,7 @@ $tags = get_tags(array(
 ));
 ?>
 
-<div class="post-list tag-panel">
+<div class="panel-tag-list tag-panel">
     <div class="header">
         <span class="header-icon">🏷️</span>
         TAG PHỔ BIẾN

@@ -12,12 +12,14 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: 0.3s;
     z-index: 1000;
-}
-.call-button:hover {
-    background-color: white;
-    color: #28a745;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
+
+    &:hover {
+        background-color: white;
+        color: #28a745;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        transform: translateY(-3px);
+    }
 }
