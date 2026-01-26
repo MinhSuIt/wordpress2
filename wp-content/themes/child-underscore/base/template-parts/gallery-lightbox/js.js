@@ -1,5 +1,5 @@
 const images = document.querySelectorAll("#gallery-custom img");
-const lightbox = document.getElementById("lightbox");
+const lightbox = document.getElementById("custom-lightbox");
 const lightboxImg = document.getElementById("lightboxImg");
 const closeBtn = document.getElementById("closeBtn");
 const prevBtn = document.getElementById("prevBtn");

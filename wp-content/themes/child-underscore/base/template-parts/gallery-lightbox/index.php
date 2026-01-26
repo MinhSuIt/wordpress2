@@ -23,7 +23,7 @@ $list = $args['list'];
 </div>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox">
+<div class="custom-lightbox" id="custom-lightbox">
     <button class="lightbox-close" id="closeBtn" aria-label="Close">
         <span>×</span>
     </button>

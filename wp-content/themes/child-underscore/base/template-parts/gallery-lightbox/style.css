@@ -17,8 +17,7 @@
   }
 }
 
-/* LIGHTBOX */
-.lightbox {
+.custom-lightbox {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, .85);
@@ -42,7 +41,6 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
   }
 
-  /* BUTTONS */
   .prev,
   .next {
     position: absolute;
@@ -84,15 +82,15 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-
+    margin: 0;
     span {
-            font-size: 28px;
-            color: #fff;
-            justify-content: center;
-            display: flex;
-            width: 42px;
-            height: 42px;
-            align-items: center;
+      font-size: 28px;
+      color: #fff;
+      justify-content: center;
+      display: flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
     }
 
     &:hover {
@@ -102,7 +100,6 @@
 
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .gallery-custom {
     grid-template-columns: repeat(2, 1fr);
