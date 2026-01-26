@@ -1,25 +1,9 @@
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-0" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-1" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-2" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-3" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-4" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:17 UTC] PHP Warning:  Undefined array key "tab-5" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-0" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-1" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-2" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-3" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-4" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:18:49 UTC] PHP Warning:  Undefined array key "tab-5" in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\template-parts\tabs\index.php on line 94
-[25-Jan-2026 14:19:26 UTC] PHP Warning:  Undefined array key "file" in C:\laragon\www\wordpress2\wp-content\plugins\query-monitor\dispatchers\Html.php on line 1021
-[25-Jan-2026 14:19:26 UTC] PHP Warning:  Undefined array key "line" in C:\laragon\www\wordpress2\wp-content\plugins\query-monitor\dispatchers\Html.php on line 1021
-[25-Jan-2026 16:11:41 UTC] Automatic updates starting...
-[25-Jan-2026 16:11:43 UTC]   Automatic plugin updates starting...
-[25-Jan-2026 16:11:43 UTC]   Automatic plugin updates complete.
-[25-Jan-2026 16:11:44 UTC] Automatic updates complete.
-[25-Jan-2026 17:14:10 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:15:03 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:16:20 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:16:57 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:17:33 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:18:18 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
-[25-Jan-2026 17:19:18 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[26-Jan-2026 11:05:06 UTC] PHP Warning:  compact(): Undefined variable $id in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:06 UTC] PHP Warning:  compact(): Undefined variable $title in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:06 UTC] PHP Warning:  compact(): Undefined variable $template-content in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:06 UTC] PHP Warning:  compact(): Undefined variable $folder in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:06 UTC] PHP Warning:  Array to string conversion in C:\laragon\www\wordpress2\wp-includes\general-template.php on line 185
+[26-Jan-2026 11:05:52 UTC] PHP Warning:  compact(): Undefined variable $id in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:52 UTC] PHP Warning:  compact(): Undefined variable $title in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:52 UTC] PHP Warning:  compact(): Undefined variable $template-content in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13
+[26-Jan-2026 11:05:52 UTC] PHP Warning:  compact(): Undefined variable $folder in C:\laragon\www\wordpress2\wp-content\themes\child-underscore\base\shortcodes\modal.php on line 13

@@ -24,7 +24,8 @@ Nếu truy cập /blog ko được thì vào cài đặt > cấu trúc đường
                         // Tạo query để lấy bài viết
                         $blog_query = new WP_Query(array(
                             'post_type' => 'post',      // Chỉ lấy bài viết
-                            'posts_per_page' => $posts_per_page,      // Số bài muốn hiển thị
+                            // 'posts_per_page' => $posts_per_page,      // Số bài muốn hiển thị
+                            'posts_per_page' => 1,      // Số bài muốn hiển thị
                             'paged'          => $paged, // rất quan trọng để phân trang
                         ));
 
@@ -85,20 +86,7 @@ Nếu truy cập /blog ko được thì vào cài đặt > cấu trúc đường
                     <div class="col-lg-8">
                         <nav class="navigation pagination py-2 d-inline-block">
                             <div class="nav-links">
-                                <?php
-                                // Các tham số phân trang
-                                $big = 999999999; // cần cho str_replace
-                                echo paginate_links(array(
-                                    'base'      => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
-                                    'format'    => '?paged=%#%',
-                                    'current'   => max(1, get_query_var('paged')),
-                                    'total'     => $blog_query->max_num_pages,
-                                    'prev_text' => 'Prev',
-                                    'next_text' => 'Next',
-                                    // 'type'      => 'list', // tạo <ul><li> giống HTML
-                                    'type'      => 'plain', // nếu chỉ thẻ a
-                                ));
-                                ?>
+                                <?php echo do_shortcode("[pagination total=" . $blog_query->max_num_pages . " base=" . str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))) . " current=" . max(1, get_query_var('paged')) . "]"); ?>
                             </div>
                         </nav>
                     </div>

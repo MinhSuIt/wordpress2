@@ -1,10 +1,9 @@
-
 <?php
 if (!defined('ABSPATH')) exit;
 
 $class = esc_attr($args['class'] ?? '');
 unset($args['class']);
-$list  = $args;
+$list  = $args['atts'];
 
 $begin_title = 'title-';
 $begin_path  = 'path-';
@@ -31,7 +30,7 @@ foreach ($titles as $key => $title) {
 <nav class="custom-breadcrumb<?php echo $class ? ' ' . $class : ''; ?>" aria-label="Breadcrumb">
 
     <?php foreach ($breadcrumbs as $i => $item): ?>
-        
+
         <?php if ($i > 0): ?>
             <span class="separator">/</span>
         <?php endif; ?>

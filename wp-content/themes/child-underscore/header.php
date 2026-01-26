@@ -26,6 +26,10 @@
 
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/tabs/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/breadcrumb/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/pagination/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/collapse/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/button/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/modal/style.css'; ?>">
 
 
     <!-- lấy style.css và các meta tag khác từ plugin -->

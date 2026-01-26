@@ -1,0 +1,42 @@
+.custom-collapse {
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 12px 16px;
+    background: #fff;
+
+    summary {
+        cursor: pointer;
+        font-weight: 600;
+        list-style: none;
+        position: relative;
+        padding-right: 28px;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 22px;
+            line-height: 1;
+            transition: transform .25s ease, color .25s ease;
+            transform-origin: center;
+            color: #111827;
+        }
+    }
+
+    &[open] {
+        summary::after {
+            transform: rotate(45deg);
+            color: #2563eb;
+        }
+    }
+
+    &-content {
+        overflow: hidden;
+        line-height: 1.6;
+    }
+}

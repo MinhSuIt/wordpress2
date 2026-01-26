@@ -73,6 +73,8 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/base/template-parts/accordion/js.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/base/template-parts/slider/js.js" defer></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/base/template-parts/collapse/js.js" defer></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/base/template-parts/modal/js.js" defer></script>
 
 <!-- bắt buộc để load js liên quan plugin -->
 <?php wp_footer(); ?>

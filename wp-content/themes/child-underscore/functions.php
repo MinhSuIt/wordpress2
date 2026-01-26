@@ -22,6 +22,12 @@ $requires = [
     '/base/shortcodes/accordion.php',
     '/base/shortcodes/slider.php',
     '/base/shortcodes/tabs.php',
+    '/base/shortcodes/breadcrumb.php',
+    '/base/shortcodes/pagination.php',
+    '/base/shortcodes/collapse.php',
+    '/base/shortcodes/button.php',
+    '/base/shortcodes/modal.php',
+    
 ];
 
 foreach ($requires as $file) {

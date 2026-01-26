@@ -13,6 +13,8 @@
     width: 100%;
     z-index: 9999999;
     height: var(--header-height);
+    top: 0;
+    left: 0;
 
     .navbar-logo {
         font-size: 1.5rem;

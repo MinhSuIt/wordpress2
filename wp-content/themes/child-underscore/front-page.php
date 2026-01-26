@@ -429,6 +429,31 @@ echo do_shortcode("[tabs_shortcode
     title-4='Tab 4' 
     tab-4='tab-4'
 ]");
+echo do_shortcode("[breadcrumb_shortcode 
+    class='custom-class' 
+    title-1='Trang chủ' 
+    title-2='Danh mục'
+    title-3='Bài viết hiện tại' 
+    path-1='#'
+    path-2='#'
+    path-3='#'
+]");
+echo do_shortcode("[collapse_shortcode 
+    class='custom-class'
+    folder='base/template-parts/collapse/'
+    title-1='Trang chủ' 
+    title-2='Danh mục'
+    template-1='template-1'
+    template-2='template-2'
+]");
+// button với thẻ a chuyển hướng
+echo do_shortcode("[button_shortcode class='custom-class' text='Ghé 24h' url='24h.com.vn' type='a']"); 
+// button với support modal có id là modal-1
+echo do_shortcode("[button_shortcode class='custom-class' text='Xem thêm' url='24h.com.vn' type='button' data-modal-target='modal-1']");
+
+
+echo do_shortcode("[modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
+
 // get_template_part('base/template-parts/post-list/index');
 // get_template_part('base/template-parts/tag-list/index');
 // get_template_part('base/template-parts/menu/index');
@@ -438,6 +463,25 @@ echo do_shortcode("[tabs_shortcode
 // get_template_part('base/template-parts/accordion/index');
 // get_template_part('base/template-parts/slider/index');
 // get_template_part('base/template-parts/tabs/index');
-get_template_part('base/template-parts/breadcrumb/index', null, ['class' => 'custom-class', 'title-1' => 'Trang chủ', 'title-2' => 'Danh mục', 'title-3' => 'Bài viết hiện tại', 'path-1' => '#', 'path-2' => '#', 'path-3' => '#']);
+// get_template_part('base/template-parts/breadcrumb/index', null, ['class' => 'custom-class', 'title-1' => 'Trang chủ', 'title-2' => 'Danh mục', 'title-3' => 'Bài viết hiện tại', 'path-1' => '#', 'path-2' => '#', 'path-3' => '#']);
+// get_template_part('base/template-parts/collapse/index', null, [
+//     'class' => 'custom-class',
+//     'folder' => "base/template-parts/collapse/",
+//     'atts' => [
+//         'title-1' => 'Trang chủ',
+//         'title-2' => 'Danh mục',
+//         'template-1' => 'template-1',
+//         'template-2' => 'template-2',
+//     ]
+// ]);
+
+// get_template_part('base/template-parts/button/index', null, [
+//     'class' => 'custom',
+//     'text' => 'Xem thêm',
+//     'url' => 'https://24h.com.vn'
+// ]);
+
+get_template_part('base/template-parts/modal/index');
+
 get_footer();
 ?>

@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+/* BUTTON */
+.open-modal-btn {
+    padding: 12px 30px;
+    margin-right: 10px;
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* MODAL */
+.custom-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    &.active {
+        display: flex;
+    }
+
+    /* MODAL BOX */
+    .modal-content {
+        background: #fff;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 12px;
+        padding: 25px;
+        position: relative;
+        animation: modalFade 0.25s ease;
+
+        /* CLOSE BUTTON */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 14px;
+            font-size: 22px;
+            cursor: pointer;
+            background: none;
+            border: none;
+
+            &:focus{
+                outline: unset;
+            }
+        }
+    }
+}
+
+/* ANIMATION */
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

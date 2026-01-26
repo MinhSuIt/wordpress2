@@ -7,6 +7,24 @@ thư viện css:
 	ScrollReveal
 	WOW.js + Animate.css
 	GSAP + ScrollTrigger 
+async: dạng async all
+	Tải JS song song với HTML
+	Chạy ngay khi tải xong
+	❌ KHÔNG đợi HTML parse xong
+	❌ KHÔNG đảm bảo thứ tự giữa các script
+	👉 Dùng khi:
+		Script độc lập
+		Không phụ thuộc DOM
+		Không phụ thuộc script khác
+		Ví dụ: Google Analytics, Ads
+defer: async await
+	Tải JS song song với HTML
+	✅ Đợi HTML parse xong mới chạy
+	✅ CHẠY THEO THỨ TỰ KHAI BÁO
+	👉 Dùng khi:
+		Script phụ thuộc DOM
+		Có thứ tự phụ thuộc nhau
+		(VD: jQuery → plugin → main.js)
 dùng laragon dev cho nhẹ và tránh lỗi permission khi install plugin, khi lên prod thì vẫn dùng laradock đc
 // Ngăn truy cập trực tiếp cho các file php
 if ( ! defined( 'ABSPATH' ) ) {
