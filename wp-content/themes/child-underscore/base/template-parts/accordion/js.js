@@ -5,7 +5,6 @@ items.forEach(item => {
     const content = item.querySelector(".accordion-content");
 
     header.addEventListener("click", () => {
-
         // đóng tất cả
         items.forEach(i => {
             if (i !== item) {
@@ -20,7 +19,7 @@ items.forEach(item => {
         if (item.classList.contains("active")) {
             content.style.maxHeight = content.scrollHeight + "px";
         } else {
-            content.style.maxHeight = null;
+            content.style.maxHeight = 0;
         }
     });
 });
