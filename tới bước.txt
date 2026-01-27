@@ -1,2 +1,3 @@
+viết ux builder element cho các shortcode đã có cho phép nhúng các element có sẵn vào element của mình
 category.php thêm testimonial chưa đc
 send mail khi có người submit contact form: deploy trên free hosting + domain thật

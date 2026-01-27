@@ -5,6 +5,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php
 function panel_tag_list_shortcode($atts) {
+    wp_enqueue_style(
+        'panel-tag-list',
+        get_stylesheet_directory_uri() . '/base/template-parts/panel-tag-list/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
     ob_start();
     get_template_part('base/template-parts/panel-tag-list/index');
     return ob_get_clean();

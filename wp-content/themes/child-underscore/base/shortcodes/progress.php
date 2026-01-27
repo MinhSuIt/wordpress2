@@ -5,6 +5,14 @@ if (!defined('ABSPATH')) {
 
 function progress_shortcode($atts)
 {
+    wp_enqueue_style(
+        'progress',
+        get_stylesheet_directory_uri() . '/base/template-parts/progress/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+
     $atts = extract(shortcode_atts([
         'progress' => '100%',
         'class' => '',

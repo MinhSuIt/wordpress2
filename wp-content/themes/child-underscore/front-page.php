@@ -454,6 +454,8 @@ echo do_shortcode("[button_shortcode class='custom-class' text='Xem thêm' url='
 
 echo do_shortcode("[modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
 echo do_shortcode("[progress_shortcode class='custom-class' progress='50%']");
+echo do_shortcode("[toast_shortcode class='custom-class']");
+
 // get_template_part('base/template-parts/post-list/index');
 // get_template_part('base/template-parts/tag-list/index');
 // get_template_part('base/template-parts/menu/index');
@@ -483,6 +485,12 @@ echo do_shortcode("[progress_shortcode class='custom-class' progress='50%']");
 
 // get_template_part('base/template-parts/modal/index');
 // get_template_part('base/template-parts/progress/index', null, ['progress' => '50%']);
-get_template_part('base/template-parts/toast/index');
+// get_template_part('base/template-parts/toast/index');
 get_footer();
 ?>
+<div class="actions">
+    <button onclick="showToast('Thành công!', 'success')">Success</button>
+    <button onclick="showToast('Có lỗi xảy ra!', 'error')">Error</button>
+    <button onclick="showToast('Thông tin mới', 'info')">Info</button>
+    <button onclick="showToast('Cảnh báo!', 'warning')">Warning</button>
+</div>

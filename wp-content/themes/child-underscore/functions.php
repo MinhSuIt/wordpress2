@@ -28,7 +28,8 @@ $requires = [
     '/base/shortcodes/button.php',
     '/base/shortcodes/modal.php',
     '/base/shortcodes/progress.php',
-    
+    '/base/shortcodes/toast.php',
+    '/base/shortcodes/my_shortcode.php',
 ];
 
 foreach ($requires as $file) {

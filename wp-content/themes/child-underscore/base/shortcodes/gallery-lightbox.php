@@ -11,6 +11,21 @@ function wpImage($url, $size = '600x408')
 }
 function gallery_lightbox_shortcode($atts)
 {
+    wp_enqueue_style(
+        'gallery-lightbox',
+        get_stylesheet_directory_uri() . '/base/template-parts/gallery-lightbox/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+    wp_enqueue_script(
+        'gallery-lightbox',
+        get_stylesheet_directory_uri() . '/base/template-parts/gallery-lightbox/js.js',
+        array(),        // dependency, ví dụ: array('jquery')
+        '1.0',
+        array('strategy' => 'defer') // strategy: 'defer' hoặc 'async'
+    );
+
     $params = [
         'class'          => $atts['class'] ?? '', // để custom css
     ];

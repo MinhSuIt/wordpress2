@@ -1,5 +1,5 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 ?>
@@ -7,6 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php
 function breadcrumb_shortcode($atts)
 {
+    wp_enqueue_style(
+        'breadcrumb',
+        get_stylesheet_directory_uri() . '/base/template-parts/breadcrumb/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+
     extract(shortcode_atts([
         'class'          => '', // để custom css
     ], $atts), EXTR_SKIP);
@@ -15,7 +23,7 @@ function breadcrumb_shortcode($atts)
     get_template_part(
         'base/template-parts/breadcrumb/index',
         null,
-        compact('class','atts') // ~ ['class' => $class]
+        compact('class', 'atts') // ~ ['class' => $class]
     );
     return ob_get_clean();
 }

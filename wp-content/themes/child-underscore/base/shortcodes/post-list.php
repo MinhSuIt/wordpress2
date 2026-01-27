@@ -7,6 +7,13 @@ if (! defined('ABSPATH')) {
 <?php
 function post_list_shortcode($atts)
 {
+    wp_enqueue_style(
+        'post-list',
+        get_stylesheet_directory_uri() . '/base/template-parts/post-list/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
     extract(shortcode_atts([
         'class'          => '', // để custom css
         'post_type'     => 'post', // để custom post type

@@ -4,7 +4,13 @@
     <button onclick="showToast('Thông tin mới', 'info')">Info</button>
     <button onclick="showToast('Cảnh báo!', 'warning')">Warning</button>
 </div> -->
-<div class="toast-container" id="toastContainer"></div>
 
-<!-- get_template_part('base/template-parts/toast/index'); -->
-<!-- showToast('Cảnh báo!', 'warning') -->
+<?php
+if (! defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+?>
+<?php
+$class = esc_attr($args['class'] ?? '');
+?>
+<div class="toast-container<?php if ($class) echo ' ' . $class; ?>" id="toastContainer"></div>

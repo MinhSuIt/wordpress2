@@ -7,6 +7,34 @@ if (! defined('ABSPATH')) {
 <?php
 function slider_shortcode($atts)
 {
+    wp_enqueue_style(
+        'swiper',
+        'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css',
+        array(),
+        '12.0',
+        'all'
+    );
+    wp_enqueue_style(
+        'slider',
+        get_stylesheet_directory_uri() . '/base/template-parts/slider/style.css',
+        array('swiper'), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+    wp_enqueue_script(
+        'swiper-js',
+        'https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js',
+        array(),
+        '12.0',
+        array('strategy' => 'defer')
+    );
+    wp_enqueue_script(
+        'slider',
+        get_stylesheet_directory_uri() . '/base/template-parts/slider/js.js',
+        array('swiper-js'),        // dependency, ví dụ: array('jquery')
+        '1.0',
+        array('strategy' => 'defer') // strategy: 'defer' hoặc 'async'
+    );
     extract(shortcode_atts([
         'class'          => '', // để custom css
     ], $atts), EXTR_SKIP);

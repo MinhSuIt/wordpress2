@@ -7,6 +7,22 @@ if (! defined('ABSPATH')) {
 <?php
 function accordion_shortcode($atts)
 {
+    wp_enqueue_style(
+        'accordion',
+        get_stylesheet_directory_uri() . '/base/template-parts/accordion/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+    wp_enqueue_script(
+        'accordion',
+        get_stylesheet_directory_uri() . '/base/template-parts/accordion/js.js',
+        array(),        // dependency, ví dụ: array('jquery')
+        '1.0',
+        array('strategy' => 'defer') // strategy: 'defer' hoặc 'async'
+    );
+    // nếu tách các code này thành plugin thì load bằng: plugin_dir_url
+    // ngoài ra check page cụ thể để load css/js: is_page_template/is_page/is_single/is_home...
     extract(shortcode_atts([
         'class'          => '', // để custom css
         'folder'         => 'base/template-parts/accordion/' // từ theme hiện tại

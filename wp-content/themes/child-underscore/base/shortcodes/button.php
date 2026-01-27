@@ -1,6 +1,13 @@
 <?php
 function button_shortcode($atts)
 {
+    wp_enqueue_style(
+        'button',
+        get_stylesheet_directory_uri() . '/base/template-parts/button/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
     ob_start();
 
     get_template_part(

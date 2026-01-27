@@ -7,6 +7,20 @@ if (! defined('ABSPATH')) {
 <?php
 function tabs_shortcode($atts)
 {
+    wp_enqueue_style(
+        'tabs',
+        get_stylesheet_directory_uri() . '/base/template-parts/tabs/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
+    wp_enqueue_script(
+        'tabs',
+        get_stylesheet_directory_uri() . '/base/template-parts/tabs/js.js',
+        array(),        // dependency, ví dụ: array('jquery')
+        '1.0',
+        array('strategy' => 'defer') // strategy: 'defer' hoặc 'async'
+    );
     extract(shortcode_atts([
         'class'          => '', // để custom css
         'folder'     => 'base/template-parts/tabs/', // thư mục chứa template-part   

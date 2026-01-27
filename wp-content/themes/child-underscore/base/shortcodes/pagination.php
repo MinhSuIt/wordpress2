@@ -31,6 +31,13 @@ add_shortcode('pagination', function ($atts) {
     if (! $wp_query instanceof WP_Query) {
         return '';
     }
+    wp_enqueue_style(
+        'pagination',
+        get_stylesheet_directory_uri() . '/base/template-parts/pagination/style.css',
+        array(), // dependency
+        '1.0',
+        'all' // media: all, screen, print
+    );
     return render_pagination([
         'current' => $atts['current'],
         'total'   => (int) $atts['total'],
@@ -50,4 +57,3 @@ add_shortcode('pagination', function ($atts) {
 // ));
 
 // echo do_shortcode("[pagination total=" . $blog_query->max_num_pages . " base=" . str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))) . " current=" . max(1, get_query_var('paged')) . "]");
-
