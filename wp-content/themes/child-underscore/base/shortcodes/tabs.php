@@ -23,4 +23,15 @@ function tabs_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('tabs_shortcode', 'tabs_shortcode');
+// echo do_shortcode("[tabs_shortcode 
+//     class='custom-class' 
+//     title-1='Tab 1' 
+//     tab-1='tab-1' 
+//     title-2='Tab 2' 
+//     tab-2='tab-2' 
+//     title-3='Tab 3' 
+//     tab-3='tab-3'
+//     title-4='Tab 4' 
+//     tab-4='tab-4'
+// ]");
 ?>

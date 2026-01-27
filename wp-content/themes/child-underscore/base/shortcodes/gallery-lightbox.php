@@ -34,5 +34,8 @@ function gallery_lightbox_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('gallery_lightbox_shortcode', 'gallery_lightbox_shortcode');
-// echo do_shortcode("[gallery_lightbox_shortcode class='custom-class' img-1='http://wordpress2.test/wp-content/uploads/2025/01/3.jpg' img-2='http://wordpress2.test/wp-content/uploads/2026/01/1.jpg' img-3='http://wordpress2.test/wp-content/uploads/2026/01/2.jpg']");
+// echo do_shortcode("[gallery_lightbox_shortcode class='custom-class' 
+// a='http://wordpress2.test/wp-content/uploads/2025/01/3.jpg' 
+// b='http://wordpress2.test/wp-content/uploads/2026/01/1.jpg' 
+// c='http://wordpress2.test/wp-content/uploads/2026/01/2.jpg']");
 ?>

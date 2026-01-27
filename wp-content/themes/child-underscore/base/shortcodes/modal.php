@@ -1,7 +1,6 @@
 <?php
 function modal_shortcode($atts)
 {
-
     $atts = shortcode_atts([
         'id'               => 'modal-1',
         'title'            => 'Xin chào!',
@@ -19,3 +18,5 @@ function modal_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('modal_shortcode', 'modal_shortcode');
+// echo do_shortcode("[modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
+

@@ -21,5 +21,5 @@ function scroll_to_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('scroll_to_shortcode', 'scroll_to_shortcode');
-// <?php echo do_shortcode("[scroll_to_shortcode class='custom-class' id='#top']"); 
+// echo do_shortcode('[scroll_to_shortcode class="custom-class" id="top" class="custom-class"]');
 ?>

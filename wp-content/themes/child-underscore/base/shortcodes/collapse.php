@@ -23,3 +23,11 @@ function collapse_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('collapse_shortcode', 'collapse_shortcode');
+// echo do_shortcode("[collapse_shortcode 
+//     class='custom-class'
+//     folder='base/template-parts/collapse/'
+//     title-1='Trang chủ' 
+//     title-2='Danh mục'
+//     template-1='template-1'
+//     template-2='template-2'
+// ]");

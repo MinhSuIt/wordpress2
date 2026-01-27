@@ -20,5 +20,13 @@ function breadcrumb_shortcode($atts)
     return ob_get_clean();
 }
 add_shortcode('breadcrumb_shortcode', 'breadcrumb_shortcode');
-// <?php echo do_shortcode("[breadcrumb_shortcode class='custom-class']"); 
+// echo do_shortcode("[breadcrumb_shortcode 
+//     class='custom-class' 
+//     title-1='Trang chủ' 
+//     title-2='Danh mục'
+//     title-3='Bài viết hiện tại' 
+//     path-1='#'
+//     path-2='#'
+//     path-3='#'
+// ]");
 ?>
