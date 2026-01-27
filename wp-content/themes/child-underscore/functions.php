@@ -27,6 +27,7 @@ $requires = [
     '/base/shortcodes/collapse.php',
     '/base/shortcodes/button.php',
     '/base/shortcodes/modal.php',
+    '/base/shortcodes/progress.php',
     
 ];
 

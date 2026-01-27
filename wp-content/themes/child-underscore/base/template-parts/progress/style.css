@@ -1,0 +1,24 @@
+.progress-container {
+    width: 400px;
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+
+    .progress-bar {
+        height: 25px;
+        width: var(--progress);
+        background: linear-gradient(90deg, #4facfe, #00f2fe);
+        border-radius: 20px;
+        animation: load 1.5s ease;
+    }
+}
+
+@keyframes load {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--progress);
+    }
+}

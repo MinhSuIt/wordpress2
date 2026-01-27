@@ -1,6 +1,2 @@
-modal
-progress
-toast
-tooltip
 category.php thêm testimonial chưa đc
 send mail khi có người submit contact form: deploy trên free hosting + domain thật

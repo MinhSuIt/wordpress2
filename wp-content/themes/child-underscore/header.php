@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/collapse/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/button/style.css'; ?>">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/modal/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/progress/style.css'; ?>">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() . '/base/template-parts/toast/style.css'; ?>">
 
 
     <!-- lấy style.css và các meta tag khác từ plugin -->
