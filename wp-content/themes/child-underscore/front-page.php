@@ -447,9 +447,9 @@ echo do_shortcode("[collapse_shortcode
     template-2='template-2'
 ]");
 // button với thẻ a chuyển hướng
-echo do_shortcode("[button_shortcode class='custom-class' text='Ghé 24h' url='24h.com.vn' type='a']");
+echo do_shortcode("[custom_button_shortcode class='custom-class' text='Ghé 24h' url='24h.com.vn' type='a']");
 // button với support modal có id là modal-1
-echo do_shortcode("[button_shortcode class='custom-class' text='Xem thêm' url='24h.com.vn' type='button' data-modal-target='modal-1']");
+echo do_shortcode("[custom_button_shortcode class='custom-class' text='Xem thêm' url='24h.com.vn' type='button' data-modal-target='modal-1']");
 
 
 echo do_shortcode("[modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
