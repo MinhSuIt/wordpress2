@@ -2,12 +2,11 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
 
     <meta charset="UTF-8">
     <title>Megakit| Html5 Agency template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-
+    
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">

@@ -21,6 +21,12 @@ function child_underscore_scripts()
     // Custom CSS,JS files inside child theme
     $styles = [
         [
+            'handle' => 'child-reset-css',
+            'src' => 'https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css',
+            'deps' => [],
+            'version' => wp_get_theme()->get('Version')
+        ],
+        [
             'handle' => 'child-bootstrap-style',
             'src' => get_stylesheet_directory_uri() . '/plugins/bootstrap/css/bootstrap.min.css',
             'deps' => ['child-main-style'], // depends style.css
