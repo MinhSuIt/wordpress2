@@ -37,15 +37,15 @@ submenuLinks.forEach(link => {
 
 // Đóng menu khi click ra ngoài
 document.addEventListener("click", (e) => {
-  if (window.innerWidth <= 768) {
-    if (!e.target.closest(".navbar") && navMenu.classList.contains("active")) {
-      navMenu.classList.remove("active");
-      hamburger.classList.remove("active");
+    if (window.innerWidth <= 768) {
+        if (!e.target.closest(".navbar") && navMenu.classList.contains("active")) {
+            navMenu.classList.remove("active");
+            hamburger.classList.remove("active");
 
-      document.querySelectorAll(".submenu.active").forEach(sub => {
-        sub.classList.remove("active");
-        sub.previousElementSibling.classList.remove("active");
-      });
+            document.querySelectorAll(".submenu.active").forEach(sub => {
+                sub.classList.remove("active");
+                sub.previousElementSibling.classList.remove("active");
+            });
+        }
     }
-  }
 });
