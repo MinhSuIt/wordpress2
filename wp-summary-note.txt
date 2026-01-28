@@ -131,6 +131,23 @@ Advanced Custom Fields (ACF) : custom field cho Custom Post Type UI và tạo ta
 			add_action, remove_action, do_action, add filter, remove_filter, apply_filters để custom lại
 			kết hợp với plugin show current template để biết các file nào trong wp-content/plugins/woocommerce/templates/ được gọi để custom nhanh
 		ý nghĩa các folder trong thư mục templates:
+			content: phần nội dung chính của 1 url
+			content-* = cách hiển thị nội dung của 1 url trong từng ngữ cảnh khác nhau: get_template_part('content', 'single');
+			content.php: file fallback khi ko có file cần lấy
+			content-single.php: dùng cho trang chi tiết bài viết
+			content-page: dùng cho page nội dung tĩnh
+			content-search.php: Dùng cho kết quả tìm kiếm
+			content-none.php: ko có nội dung
+			content-product.php : cho sản phẩm woocommerce
+			page.php
+			└── get_template_part('content', 'page')
+				└── content-page.php
+					└── the_content()
+			single.php
+			└── get_template_part('content', 'single')
+				└── content-single.php
+					└── the_content()
+					
 			content-? : file nằm trong vòng lặp
 				content-product: ở trang shop/archive page/những chỗ hiển thị danh sách sản phẩm (ví dụ sản phẩm tương tự của trang single-product)
 				content-product-cat: ở trang danh mục sản phẩm 
