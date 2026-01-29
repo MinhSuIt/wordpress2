@@ -10,7 +10,7 @@ function custom_child_remove_parent_assets()
 }
 add_action('after_setup_theme', 'custom_child_remove_parent_assets');
 
-//remove css from flatsome
+//remove css from flatsome khi code from scratch
 // add_action('wp_enqueue_scripts', function () {
 //     wp_dequeue_style('flatsome-main');
 //     wp_deregister_style('flatsome-main');
