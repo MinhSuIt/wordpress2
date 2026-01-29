@@ -8,6 +8,8 @@ $requires = [
     '/custom/variation-swatches-for-woocommerce.php',
     '/custom/admin-post.php',
     '/custom/ajax.php',
+    // '/custom/rewrite-url.php',
+    
 
     '/shortcodes/woocommerce.php',
     '/base/template-parts/panel-post-list/set-up.php',

@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Các trường hợp như:
 // Đổi url của danh mục bài viết: abc.com/category/doi-song => abc.com/doi-song 
 // --------------------------------------start--------------------------------------------
+// lúc này sẽ dùng file index.php mà ko chạy file category.php nên cẩn thận, viết code sẽ chú ý file index.php (cho tất cả trang archive) và single.php (cho tất cả trang chi tiết)
 // Loại bỏ /category/ nhưng không ảnh hưởng Page 
 add_action('init', function () {
 
