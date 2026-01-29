@@ -25,15 +25,6 @@ submenuLinks.forEach(link => {
     }
 });
 
-/* search */
-// document.getElementById("searchForm").onsubmit = e => {
-//     e.preventDefault();
-//     const v = searchInput.value.trim();
-//     if (v) {
-//         alert("Bạn tìm: " + v);
-//         searchInput.value = "";
-//     }
-// }
 
 // Đóng menu khi click ra ngoài
 document.addEventListener("click", (e) => {
