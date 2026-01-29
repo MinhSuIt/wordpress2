@@ -44,11 +44,6 @@
         }
     }
 
-    /* active */
-    .swiper-slide-active {
-        transform: scale(1.05);
-    }
-
     /* ==== NAVIGATION ==== */
     .swiper-button-next,
     .swiper-button-prev {
