@@ -17,6 +17,9 @@ add_action('ux_builder_setup', function () {
   {
     return get_stylesheet_directory_uri() . '/base/ux-builder/templates/thumbs/' . $name . '.jpg';
   }
+
+  //add shortcode
   require_once get_stylesheet_directory() . '/base/shortcodes/custom_section.php';
+  //add shortcode của UX Builder
   require_once __DIR__ . '/custom_section.php';
 });
