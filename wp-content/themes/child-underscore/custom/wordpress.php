@@ -10,6 +10,12 @@ function custom_child_remove_parent_assets()
 }
 add_action('after_setup_theme', 'custom_child_remove_parent_assets');
 
+//remove css from flatsome
+// add_action('wp_enqueue_scripts', function () {
+//     wp_dequeue_style('flatsome-main');
+//     wp_deregister_style('flatsome-main');
+// }, 101);
+
 // dùng block editor mới cho widget có khả năng kéo thả widget
 // khi kéo thả vào lần đầu bị mất form thì refresh page hết lỗi
 add_filter('use_widgets_block_editor', '__return_false');
