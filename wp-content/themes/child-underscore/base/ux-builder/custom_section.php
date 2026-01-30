@@ -1,13 +1,13 @@
 <?php
 add_ux_builder_shortcode('custom_section', array(
-	'type'      => 'container', // container/single/group/wrapper
-	'name'      => __('Custom Section', 'ux-builder'),
-	'category'  => __('Layout'), // layout/content/media/interactive/shop/form/ux
+	'name'      => __('Custom Section', 'ux-builder'), // tên widget trong UX Builder
+	'category'  => __('Layout'), // layout/content/media/interactive/shop/form/ux... hoặc bất cứ tên gì để gom widget trong UX Builder vào cùng danh mục ví dụ DMS Layout
 	// 'template'  => custom_flatsome_ux_builder_template('section.html'), // cách hiển thị trong UX Builder
 	// 'thumbnail' => custom_flatsome_ux_builder_thumbnail('section'), // hình đại diện trong UX Builder
 	'info'      => '{{ label }}',
 	'priority'  => -1, // thứ tự sắp xếp trong danh mục, nhỏ trước lớn sau
 	// ---------------Các thuộc tính cho phép nested-------------
+	'type'      => 'container', // container (kéo thả các widget khác vào)/single (ko có content dùng dạng [shortcode attr="x"])
 	'wrap'      => false,
 	'require'   => array(),  // Không yêu cầu wrapper
 	'allow'     => array(),  // Cho phép tất cả elements
