@@ -3,8 +3,8 @@ add_ux_builder_shortcode('custom_section', array(
 	'type'      => 'container',
 	'name'      => __('Custom Section', 'ux-builder'),
 	'category'  => __('Layout'),
-	'template'  => custom_flatsome_ux_builder_template('section.html'), // cách hiển thị trong UX Builder
-	'thumbnail' => custom_flatsome_ux_builder_thumbnail('section'), // hình đại diện trong UX Builder
+	// 'template'  => custom_flatsome_ux_builder_template('section.html'), // cách hiển thị trong UX Builder
+	// 'thumbnail' => custom_flatsome_ux_builder_thumbnail('section'), // hình đại diện trong UX Builder
 	'info'      => '{{ label }}',
 	'priority'  => -1, // thứ tự sắp xếp trong danh mục, nhỏ trước lớn sau
 	// ---------------Các thuộc tính cho phép nested-------------
