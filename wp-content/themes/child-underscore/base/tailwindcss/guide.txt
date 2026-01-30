@@ -18,8 +18,6 @@ copy các file cho child theme:
     tailwind.config.js
     vite.config.js
 npm install
+active child theme cần dev
 truy cập thư mục child theme:
-    cấu hình wp-config.php > WP_DEBUG > true nếu đang dev ở local / false nếu cần build cho prod
-    active child theme cần dev
-    npm run dev/npm run build
-    
+    cấu hình wp-config.php > WP_DEBUG > [true] nếu đang dev ở local dùng [npm run dev] / [false] nếu cần build cho prod dùng [npm run build]
