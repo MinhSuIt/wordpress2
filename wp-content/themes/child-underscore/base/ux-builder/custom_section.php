@@ -1,8 +1,8 @@
 <?php
 add_ux_builder_shortcode('custom_section', array(
-	'type'      => 'container',
+	'type'      => 'container', // container/single/group/wrapper
 	'name'      => __('Custom Section', 'ux-builder'),
-	'category'  => __('Layout'),
+	'category'  => __('Layout'), // layout/content/media/interactive/shop/form/ux
 	// 'template'  => custom_flatsome_ux_builder_template('section.html'), // cách hiển thị trong UX Builder
 	// 'thumbnail' => custom_flatsome_ux_builder_thumbnail('section'), // hình đại diện trong UX Builder
 	'info'      => '{{ label }}',
