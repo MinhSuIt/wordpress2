@@ -4,8 +4,9 @@ functions.php của unikey:
 
         //add shortcode dùng trong ux-builder
         '/base/shortcodes/custom_section.php',
-        
-        '/base/ux-builder/set-up.php', // nếu dùng ux builder shortcode
+        '/base/shortcodes/custom-button.php',
+
+        '/base/ux-builder/set-up.php', // nếu dùng ux builder shortcode, require lại các ux builder shortcode cần dùng
     ];
 
     foreach ($requires as $file) {
