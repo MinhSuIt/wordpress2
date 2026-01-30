@@ -9,7 +9,7 @@ add_ux_builder_shortcode('custom_section', array(
 	// ---------------Các thuộc tính cho phép nested-------------
 	'type'      => 'container', // container (kéo thả các widget khác vào)/single (ko có content dùng dạng [shortcode attr="x"])
 	'wrap'      => false,
-	'require'   => array(),  // Không yêu cầu wrapper
+	'require'   => array(),  // điều kiện hiển thị & cho phép dùng element trong UX Builder, ít dùng
 	'allow'     => array(),  // Cho phép tất cả elements
 	// ---------------Các thuộc tính cho phép nested-------------
 	'options' => array(
