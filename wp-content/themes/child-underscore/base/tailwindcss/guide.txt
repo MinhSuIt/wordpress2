@@ -15,5 +15,6 @@ copy các file cho child theme:
 npm install
 truy cập thư mục child theme:
     cấu hình wp-config.php > WP_DEBUG > true nếu đang dev ở local / false nếu cần build cho prod
+    active child theme cần dev
     npm run dev/npm run build
     
