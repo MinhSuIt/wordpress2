@@ -14,9 +14,6 @@ function custom_section($atts, $content = null)
         'class'   => '',
     ), $atts));
 
-    error_log('Label: ' . $label);
-    error_log('Dark: ' . $dark);
-    error_log('Padding: ' . $padding);
     ob_start(); ?>
     <div class="my-box">
         <?php echo do_shortcode($content); ?>
