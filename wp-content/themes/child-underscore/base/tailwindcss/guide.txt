@@ -1,7 +1,7 @@
 functions.php của unikey:
     $requires = [
         '/base/tailwindcss/set-up.php',
-        '/base/ux-builder/set-up.php', // nếu dùng ux builder shortcode
+        '/base/ux-builder/set-up.php', // nếu dùng ux builder shortcode, tùy chỉnh lại các file require trong /base/ux-builder/set-up.php
     ];
 
     foreach ($requires as $file) {
