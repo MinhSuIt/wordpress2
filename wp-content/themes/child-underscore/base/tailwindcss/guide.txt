@@ -6,6 +6,7 @@ functions.php của unikey:
     foreach ($requires as $file) {
         require_once get_stylesheet_directory() . $file;
     }
+copy thư mục base cho child theme
 copy các file cho child theme:
     package.json
     postcss.config.mjs
