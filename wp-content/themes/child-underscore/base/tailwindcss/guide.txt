@@ -1,0 +1,17 @@
+functions.php của unikey:
+    $requires = [
+        '/base/tailwindcss/set-up.php',
+    ];
+
+    foreach ($requires as $file) {
+        require_once get_stylesheet_directory() . $file;
+    }
+copy các file cho child theme:
+    package.json
+    postcss.config.mjs
+    tailwind.config.js
+    vite.config.js
+truy cập thư mục child theme:
+    cấu hình wp-config.php > WP_DEBUG > true nếu đang dev ở local / false nếu cần build cho prod
+    npm run dev/npm run build
+    
