@@ -19,4 +19,5 @@ add_action('ux_builder_setup', function () {
   }
   //add shortcode của UX Builder
   require_once __DIR__ . '/custom_section.php';
+  require_once __DIR__ . '/custom-button.php';
 });
