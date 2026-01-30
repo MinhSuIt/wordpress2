@@ -31,9 +31,8 @@ $requires = [
     '/base/shortcodes/modal.php',
     '/base/shortcodes/progress.php',
     '/base/shortcodes/toast.php',
-    '/base/shortcodes/my_shortcode.php',
 
-    '/tailwindcss/set-up.php',
+    '/base/tailwindcss/set-up.php',
 ];
 
 foreach ($requires as $file) {

@@ -2,15 +2,15 @@ import { defineConfig } from 'vite'
 import FullReload from 'vite-plugin-full-reload'
 export default defineConfig(({ command }) => ({
     plugins: [FullReload(['./**/*.php'])],
-    base: command === 'build' ? '/wp-content/themes/child-underscore/tailwindcss/public/' : '/',
+    base: command === 'build' ? '/wp-content/themes/child-underscore/base/tailwindcss/public/' : '/',
     build: {
-        outDir: 'tailwindcss/public',
+        outDir: 'base/tailwindcss/public',
         manifest: true,
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                app: 'tailwindcss/resources/js/app.js',
-                style: 'tailwindcss/resources/css/app.css',
+                app: 'base/tailwindcss/resources/js/app.js',
+                style: 'base/tailwindcss/resources/css/app.css',
             },
         }
     }, server: {
