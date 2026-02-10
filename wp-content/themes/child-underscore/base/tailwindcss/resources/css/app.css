@@ -1,3 +1,172 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* chỉ viết custom css cho tất cả dự án bằng flatsome-child tại đây */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 16px !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.button,
+button,
+fieldset,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: unset;
+    text-decoration: none;
+}
+
+#main,
+#wrapper {
+    background: transparent !important;
+}
+
+.header,
+.header-wrapper {
+    background: transparent !important;
+}
+
+.top-divider {
+    border: none !important;
+}
+
+.nav-dropdown {
+    border: none !important;
+}
+
+.nav-dropdown-has-arrow li.has-dropdown:after,
+.nav-dropdown-has-arrow li.has-dropdown:before {
+    content: none !important;
+}
+
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+    box-shadow: none;
+}
+
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+select,
+textarea {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.button:hover,
+.dark .button.is-form:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+    box-shadow: none;
+}
+
+.container .section,
+.row .section {
+    padding: 0;
+    margin: 0;
+}
+
+.tabbed-content {
+    ul.nav {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            margin: 0;
+            padding: 5px 15px;
+            background: oklch(63.7% 0.237 25.331);
+            border-radius: 4px;
+
+            a {
+                padding: 0;
+
+                &::before {
+                    height: 0;
+                }
+            }
+        }
+    }
+}
+
+.post-sidebar {
+    border: none !important;
+}
+
+/* menu khi ở mobile/tablet */
+@media (max-width: 849px) {
+    .header-main li.html.custom {
+        display: block;
+    }
+
+    .tabbed-content {
+        ul.nav {
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@import "tailwindcss";
+
+/* cho phân trang */
+@layer components {
+    .custom-pagination {
+        @apply flex flex-wrap items-center justify-center gap-1 mt-8;
+    }
+
+    .custom-pagination .page-numbers {
+        @apply inline-flex items-center justify-center min-w-[36px] h-9 px-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-md transition-all duration-200 hover:bg-gray-100 hover:border-gray-300 hover:text-gray-900;
+    }
+
+    .custom-pagination .page-numbers.current {
+        @apply bg-blue-600 border-blue-600 text-white cursor-default;
+    }
+
+    .custom-pagination .page-numbers.dots {
+        @apply bg-transparent border-0 text-gray-400 cursor-default px-2;
+    }
+
+    .custom-pagination .page-numbers.next,
+    .custom-pagination .page-numbers.prev {
+        @apply text-lg px-4;
+    }
+}
+
+/* art player */
+.art-video-player {
+    height: 100% !important;
+}
+
+/* 
+luôn ưu tiên thuộc tính gap (grid/flex) hơn margin vì dễ tùy chỉnh
+margin chỉ dùng khi không dùng đc grid/flex
+*/

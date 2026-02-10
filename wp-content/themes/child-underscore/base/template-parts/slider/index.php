@@ -4,7 +4,9 @@ if (! defined('ABSPATH')) {
 }
 ?>
 <?php
-$class = esc_attr($args['class'] ?? '');
+$class = esc_attr($args['class']);
+$display_prev_next = esc_html($args['display_prev_next']);
+$display_pagination = esc_html($args['display_pagination']);
 $list  = $args['atts'] ?? [];
 // var_dump($list);
 $begin_title = 'title-';
@@ -26,7 +28,6 @@ foreach ($imgs as $key => $img) {
         'url'   => $urls[$begin_url . $index] ?? '',
     ];
 }
-// các thông số khác như img, url, title
 ?>
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -48,7 +49,21 @@ foreach ($imgs as $key => $img) {
             </div>
         <?php endforeach; ?>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <!-- thêm thuộc tính để check hiển thị pagination, button prev/next -->
+
+    <?php
+    if ($display_prev_next == "1") {
+    ?>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    <?php
+    }
+    ?>
+    <?php
+    if ($display_pagination == "1") {
+    ?>
+        <div class="swiper-pagination"></div>
+    <?php
+    }
+    ?>
 </div>

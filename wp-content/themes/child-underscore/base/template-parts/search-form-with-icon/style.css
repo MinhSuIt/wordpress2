@@ -1,0 +1,21 @@
+@media (max-width: 849px) {
+    .custom-search-form {
+        display: none;
+    }
+
+    .custom-search-icon {
+        display: block;
+    }
+}
+
+#search-lightbox {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}

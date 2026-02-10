@@ -17,14 +17,12 @@ add_action('wp_enqueue_scripts', function () {
         $manifest = json_decode(file_get_contents($manifest_path), true);
 
         if (isset($manifest['base/tailwindcss/resources/css/app.css'])) {
-            foreach ($manifest['base/tailwindcss/resources/css/app.css']['css'] as $css_file) {
-                wp_enqueue_style(
-                    'tailwindcss-' . $css_file,
-                    get_stylesheet_directory_uri() . '/tailwindcss/public/' . $css_file,
-                    [],
-                    null
-                );
-            }
+            wp_enqueue_style(
+                'tailwindcss-' . $manifest['base/tailwindcss/resources/css/app.css']['file'],
+                get_stylesheet_directory_uri() . '/base/tailwindcss/public/' . $manifest['base/tailwindcss/resources/css/app.css']['file'],
+                [],
+                null
+            );
         }
         if (isset($manifest['base/tailwindcss/resources/js/app.js'])) {
             wp_enqueue_script(
@@ -36,4 +34,4 @@ add_action('wp_enqueue_scripts', function () {
             );
         }
     }
-});
+}, 10);
