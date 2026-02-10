@@ -24,7 +24,7 @@
     <?php wp_body_open(); ?>
 
     <!-- Header Start -->
-    <?php echo do_shortcode('[menu_shortcode]'); ?>
+    <?php echo do_shortcode('[base_menu_shortcode]'); ?>
 
     <!-- <header class="navigation">
         <div class="header-top ">

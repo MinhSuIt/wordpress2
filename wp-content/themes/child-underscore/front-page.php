@@ -382,16 +382,16 @@ get_sidebar(); // sidebar.php, get_sidebar('footer');   // sẽ lấy sidebar-fo
 //     dynamic_sidebar('sidebar-1');
 // }
 
-echo do_shortcode("[panel_post_list_shortcode class='panel_post_list_shortcode-custom-class' post_type='post' posts_per_page=2 meta_key='post_views_count' orderby='meta_value_num' order='DESC']");
-echo do_shortcode('[panel_tag_list_shortcode]');
-echo do_shortcode('[scroll_to_shortcode class="custom-class" id="top" class="custom-class"]');
-echo do_shortcode("[post_list_shortcode class='custom-class' post_type='post' cat_id=1]");
-echo do_shortcode("[gallery_lightbox_shortcode class='custom-class' 
+echo do_shortcode("[base_panel_post_list_shortcode class='panel_post_list_shortcode-custom-class' post_type='post' posts_per_page=2 meta_key='post_views_count' orderby='meta_value_num' order='DESC']");
+echo do_shortcode('[base_panel_tag_list_shortcode]');
+echo do_shortcode('[base_scroll_to_shortcode class="custom-class" id="top" class="custom-class"]');
+echo do_shortcode("[base_post_list_shortcode class='custom-class' post_type='post' cat_id=1]");
+echo do_shortcode("[base_gallery_lightbox_shortcode class='custom-class' 
 a='http://wordpress2.test/wp-content/uploads/2025/01/3.jpg' 
 b='http://wordpress2.test/wp-content/uploads/2026/01/1.jpg' 
 c='http://wordpress2.test/wp-content/uploads/2026/01/2.jpg']");
-echo do_shortcode("[accordion_shortcode class='custom-class' title-1='Accordion item 1' title-2='Accordion item 2' title-3='Accordion item 3' template-1='template-1' template-2='template-2' template-3='template-3']");
-echo do_shortcode('[slider_shortcode 
+echo do_shortcode("[base_accordion_shortcode class='custom-class' title-1='Accordion item 1' title-2='Accordion item 2' title-3='Accordion item 3' template-1='template-1' template-2='template-2' template-3='template-3']");
+echo do_shortcode('[base_slider_shortcode 
     class="custom-class" 
     title-1="Siêu phẩm máy móc" 
     img-1="https://picsum.photos/id/237/600/400" 
@@ -418,7 +418,7 @@ echo do_shortcode('[slider_shortcode
     img-8="https://picsum.photos/id/244/600/400" 
     url-8="#"
 ]');
-echo do_shortcode("[tabs_shortcode 
+echo do_shortcode("[base_tabs_shortcode 
     class='custom-class' 
     title-1='Tab 1' 
     tab-1='tab-1' 
@@ -429,7 +429,7 @@ echo do_shortcode("[tabs_shortcode
     title-4='Tab 4' 
     tab-4='tab-4'
 ]");
-echo do_shortcode("[breadcrumb_shortcode 
+echo do_shortcode("[base_breadcrumb_shortcode 
     class='custom-class' 
     title-1='Trang chủ' 
     title-2='Danh mục'
@@ -438,7 +438,7 @@ echo do_shortcode("[breadcrumb_shortcode
     path-2='#'
     path-3='#'
 ]");
-echo do_shortcode("[collapse_shortcode 
+echo do_shortcode("[base_collapse_shortcode 
     class='custom-class'
     folder='base/template-parts/collapse/'
     title-1='Trang chủ' 
@@ -447,14 +447,14 @@ echo do_shortcode("[collapse_shortcode
     template-2='template-2'
 ]");
 // button với thẻ a chuyển hướng
-echo do_shortcode("[custom_button_shortcode class='custom-class' text='Ghé 24h' url='24h.com.vn' type='a']");
+echo do_shortcode("[base_custom_button_shortcode class='custom-class' text='Ghé 24h' url='24h.com.vn' type='a']");
 // button với support modal có id là modal-1
-echo do_shortcode("[custom_button_shortcode class='custom-class' text='Xem thêm' url='24h.com.vn' type='button' data-modal-target='modal-1']");
+echo do_shortcode("[base_custom_button_shortcode class='custom-class' text='Xem thêm' url='24h.com.vn' type='button' data-modal-target='modal-1']");
 
 
-echo do_shortcode("[modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
-echo do_shortcode("[progress_shortcode class='custom-class' progress='50%']");
-echo do_shortcode("[toast_shortcode class='custom-class']");
+echo do_shortcode("[base_modal_shortcode id='modal-1' title='Xin chào' template-content='template-content' folder='base/template-parts/modal/']");
+echo do_shortcode("[base_progress_shortcode class='custom-class' progress='50%']");
+echo do_shortcode("[base_toast_shortcode class='custom-class']");
 
 // get_template_part('base/template-parts/post-list/index');
 // get_template_part('base/template-parts/tag-list/index');

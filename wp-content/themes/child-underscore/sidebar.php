@@ -1,3 +1,3 @@
 <!-- <?php get_template_part('base/template-parts/call-button/index'); ?> -->
 
-<?php echo do_shortcode("[call_button_shortcode class='custom-class' phone='915452237']"); ?>
+<?php echo do_shortcode("[base_call_button_shortcode class='custom-class' phone='915452237']"); ?>
